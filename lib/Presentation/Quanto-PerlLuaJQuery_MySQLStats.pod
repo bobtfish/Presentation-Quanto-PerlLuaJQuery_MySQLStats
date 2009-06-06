@@ -1,0 +1,56 @@
+=head1 Quanto - MySQLProxy query aggregator
+
+Using MySQLProxy, Lua, JQuery and perl to aggregate MySQL query statistics.
+
+    Tomas Doran &lt; t0m@state51.co.uk &gt;
+
+=head1 Query comments
+
+    /* Filename@LINE_NO@subroutine */ <br>
+        SELECT * <br>
+        FROM giant_table <br>
+        JOIN other_giant_table <br>
+          WHERE unindexed_field = 'hahaha';<br>
+
+You can see the comment when you C<SHOW PROCESSLIST>,
+you ask the svn/git blame, you know who to B<stab>, super!
+
+=head1 Generate by
+
+G<upstack.png>
+
+=head1 Monkeypatch DBI
+
+G<monkeypatch.png>
+
+=head1 Run MySQLProxy + Quanto
+
+=head1 Quanto
+
+Lua extension to MySQLProxy.
+
+Filters and aggregates your query comments. Adds extra commands to the
+mysql vocabluary to get query stats back.
+
+Perl CGI + JQuery to display nice stats.
+
+=head1 Screenshot 1
+
+G<quanto_shot1.png>
+
+=head1 Screenshot 2
+
+G<quanto_shot2.png>
+
+=head1 Questions?
+
+Code and presentation are on github:
+
+    http://github.com/bobtfish/Presentation-Quanto-PerlLuaJQuery_MySQLStats
+<br><br>
+    http://github.com/andym/Quanto
+
+Thanks!
+
+=cut
+
