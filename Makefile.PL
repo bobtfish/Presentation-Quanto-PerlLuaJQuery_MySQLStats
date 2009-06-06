@@ -1,7 +1,7 @@
 use inc::Module::Install 0.78;
 
 author 'Tomas Doran (t0m) <bobtfish@bobtfish.net>';
-name 'Presentation-Quanto-PerlLuaJQuery_MySQLStats';
+name 'Presentation-Quanto_PerlLuaJQuery_MySQLStats';
 all_from('lib/Presentation/Quanto-PerlLuaJQuery_MySQLStats.pm');
 license 'perl';
 
