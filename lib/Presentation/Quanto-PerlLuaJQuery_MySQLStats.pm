@@ -59,7 +59,7 @@ method _build_slides {
     my $p = do { local $/; Load(<$dh>) }; # Slurpy
     my $s5 = Pod::S5->new(%$p);
     my $pod = $self->_slurp_pod;
-    return $self->_change_location($s5->process($self->_slurp_pod));
+    return $s5->process($self->_slurp_pod);
 }
 
 method _slides_uri {
@@ -75,13 +75,6 @@ method _dist_name {
 
 method _s5_dir {
     dist_dir($self->_dist_name);
-}
-
-sub _change_location {
-    my ($self, $text) = @_;
-    my $s5_dir = $self->_s5_dir();
-    $text =~ s#(href|src)="ui/#$1="file://$s5_dir/ui/#g;
-    return $text;
 }
 
 __PACKAGE__->meta->make_immutable;
