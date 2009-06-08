@@ -12,8 +12,11 @@ Using MySQLProxy, Lua, JQuery and perl to aggregate MySQL query statistics.
         JOIN other_giant_table <br>
           WHERE unindexed_field = 'hahaha';<br>
 
-You can see the comment when you C<SHOW PROCESSLIST>,
-you ask the svn/git blame, you know who to B<stab>, super!
+You can see the comment when you C<SHOW PROCESSLIST>!
+
+=head1 And then
+
+G<stab.jpg>
 
 =head1 Generate by
 
@@ -23,13 +26,15 @@ G<upstack.png>
 
 G<monkeypatch.png>
 
-=head1 Run MySQLProxy + Quanto
-
 =head1 Quanto
 
 Lua extension to MySQLProxy.
 
-Filters and aggregates your query comments. Adds extra commands to the
+Filters and aggregates your query comments.
+Stores timing information, counts number of calls,
+row counts returned saves query text (of the first query).
+
+Adds extra commands to the
 mysql vocabluary to get query stats back.
 
 Perl CGI + JQuery to display nice stats.

@@ -92,8 +92,8 @@ __DATA__
 ---
 theme: default
 author: Tomas Doran
-creation: 20090522
+creation: 20090610
 where: BCS
-company: state51 
+company: state51
 name: Quanto - MySQLProxy query aggregator
 
