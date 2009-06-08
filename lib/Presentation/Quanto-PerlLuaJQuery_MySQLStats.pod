@@ -1,10 +1,12 @@
 =head1 Quanto - MySQLProxy query aggregator
 
-Using MySQLProxy, Lua, JQuery and perl to aggregate MySQL query statistics.
+Easy aggregation of your query statistics.
 
     Tomas Doran &lt; t0m@state51.co.uk &gt;
 
 =head1 Query comments
+
+Change your code to emit a comment for each query.
 
     /* Filename@LINE_NO@subroutine */ <br>
         SELECT * <br>
@@ -12,32 +14,43 @@ Using MySQLProxy, Lua, JQuery and perl to aggregate MySQL query statistics.
         JOIN other_giant_table <br>
           WHERE unindexed_field = 'hahaha';<br>
 
-You can see the comment when you C<SHOW PROCESSLIST>!
+You can see the comment when you C<SHOW PROCESSLIST>
 
-=head1 And then
+Really handy!
+
+=head1 Filename &amp; line + svn blame 
 
 G<stab.jpg>
 
-=head1 Generate by
+No use for lots of little queries in a loop though..
+
+=head1 We generate by
 
 G<upstack.png>
 
-=head1 Monkeypatch DBI
+B<Example only> - apply to your language of choice.
+
+=head1 And monkeypatch DBI
 
 G<monkeypatch.png>
 
+B<Example only> (although our technique is similar in ruby)
+
 =head1 Quanto
 
-Lua extension to MySQLProxy.
+Extension to MySQLProxy written in Lua.
 
 Filters and aggregates your query comments.
+
 Stores timing information, counts number of calls,
-row counts returned saves query text (of the first query).
+row counts returned etc.
 
-Adds extra commands to the
-MySQL vocabulary to get query stats back.
+Adds extra commands to the MySQL vocabulary to get query stats back.
+CGI + JQuery to display in browser.
 
-Perl CGI + JQuery to display nice stats.
+Solves the lots of queries in a loop problem.
+
+B<NOT> perl specific.
 
 =head1 Screen shot 1
 
@@ -51,9 +64,10 @@ G<quanto_shot2.png>
 
 Code and presentation are on github:
 
-    http://github.com/bobtfish/Presentation-Quanto-PerlLuaJQuery_MySQLStats
-<br><br>
     http://github.com/andym/Quanto
+
+Patches welcome, especially solutions for generating query comments in your
+language of choice, or a less crappy cgi.
 
 Thanks!
 
