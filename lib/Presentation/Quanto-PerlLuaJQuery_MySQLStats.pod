@@ -35,15 +35,15 @@ Stores timing information, counts number of calls,
 row counts returned saves query text (of the first query).
 
 Adds extra commands to the
-mysql vocabluary to get query stats back.
+MySQL vocabulary to get query stats back.
 
 Perl CGI + JQuery to display nice stats.
 
-=head1 Screenshot 1
+=head1 Screen shot 1
 
 G<quanto_shot1.png>
 
-=head1 Screenshot 2
+=head1 Screen shot 2
 
 G<quanto_shot2.png>
 
